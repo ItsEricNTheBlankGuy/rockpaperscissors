@@ -8,18 +8,45 @@
 
 
 // DOCUMENT READY FUNCTION BELOW
-
 $("#shoot").click(function(){
+    
+    
     
     let turnPick = $("#input").val();
     
-    if(["rock", "paper", "scissors"].includes(turnPick)) {
+    function turnPickText () {
         $("#userChoice").text(turnPick);
     }
+    
+    if(turnPick === "rock") {
+        turnPickText();
+        var myValue = 0;
+    } else if (turnPick === "paper") {
+        turnPickText();
+        var myValue = 1;
+    } else if (turnPick === "scissor") {
+        turnPickText();
+        var myValue = 2;
+    } 
+    
+
     
     let number = Math.floor(Math.random() * 3);
     
     if (number === 0) {
-        $("#userChoice").text("rock");
-    } 
+        $("#computerChoice").text("rock");
+    } else if (number === 1) {
+        $("#computerChoice").text("paper");
+    } else if (number === 2) {
+        $("#computerChoice").text("scissor");
+    }
+    
+    if (myValue - number === 1 || myValue - number === -2) {
+        $("#result").text("Win");
+    } else if (number - myValue === 1 || number - myValue === -2) {
+        $("#result").text("Lose");
+    } else {
+        $("#result").text("Tie");
+    }
+    
 });
