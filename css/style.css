@@ -1,12 +1,50 @@
 .row{
-  text-align:center;
+  
   
 }
 #choices{
   display:flex;
   justify-content:space-between;
-  
+}
+body {
+    background-color: rgb(254, 102, 102);
 }
 .title {
-  border: gold 10px double;
+    margin-bottom: 0px;
+    width: 570px;
+    font-size: 60px;
+    font-family: 'Lobster', cursive;
+    color: white;
+}
+.title-t {
+    margin-top: 0px;
+    width: 410px;
+    font-size: 30px;
+    margin-bottom: 40px;
+    font-family: 'Lobster', cursive;
+    color: white;
+}
+.title-box {
+    border: gold 30px double;
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 180px;
+    background-color: rgba(0,0,0,0.5);
+}
+.stuff {
+    width: 400px;
+}
+.fun {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: dotted 20px gold;
+    background-color: rgba(0,0,0,0.5);
+    height: 900px;
+}
+.vs {
+    font-size: 100px;
+    color: white;
 }
